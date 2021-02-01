@@ -29,6 +29,7 @@ class InsertSortTest {
         assertArrayEquals(expectedResult, result);
         System.out.println(Arrays.toString(arr));
     }
+
     @Test
     void sortArray_emptyArray() {
         int[] emptyArray = {};
@@ -39,3 +40,4 @@ class InsertSortTest {
         System.out.println(Arrays.toString(emptyArray));
     }
 }
+
