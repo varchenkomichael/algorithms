@@ -15,9 +15,29 @@ class InsertSortTest {
         int[] arr = {5, 2, 1, 10, 50, 10};
         int[] expectedResult = {1, 2, 5, 10, 10, 50};
 
-        int[] result = insertSort.arr(arr) ;
+        int[] result = insertSort.arr(arr);
 
         assertArrayEquals(expectedResult, result);
-System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
+    }
+
+    @Test
+    void sortArray_negativeNumbers() {
+        int[] arr = {-5, 2, 1, -10, 50, -1000000000};
+        int[] expectedResult = {-1000000000, -10, -5, 1, 2, 50};
+
+        int[] result = insertSort.arr(arr);
+        assertArrayEquals(expectedResult, result);
+        System.out.println(Arrays.toString(arr));
+    }
+    @Test
+    void sortArray_nullPointer() {
+        int[] arr = null;
+        int[] expectedResult = {};
+
+        int[] result = insertSort.arr(arr);
+
+        assertArrayEquals(expectedResult, result);
+        System.out.println(Arrays.toString(arr));
     }
 }

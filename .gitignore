@@ -1,5 +1,2 @@
-'.idea' 
 
-'git push --set-upstream origin insertsort' 
-'sortproject.xml' 
 '.idea','target','sortproject.iml' 
