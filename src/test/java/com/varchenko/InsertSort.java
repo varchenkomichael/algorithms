@@ -1,7 +1,7 @@
 package com.varchenko;
 
 public class InsertSort {
-        public int [] Sort (int [] arr) {
+        public int [] sort (int [] arr) {
             if (arr == null) return new int[]{};
             for (int i = 0; i < arr.length; i++) {
                 int index = i;
