@@ -1,1 +1,3 @@
-'.idea','target','sortproject.iml'
+'.idea'
+'target'
+'*.iml'
