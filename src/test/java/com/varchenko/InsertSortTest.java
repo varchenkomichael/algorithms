@@ -14,7 +14,7 @@ class InsertSortTest {
         int[] arr = {5, 2, 1, 10, 50, 10};
         int[] expectedResult = {1, 2, 5, 10, 10, 50};
 
-        int[] result = insertSort.sort()(arr);
+        int[] result = insertSort.sort(arr);
 
         assertArrayEquals(expectedResult, result);
         System.out.println(Arrays.toString(arr));
