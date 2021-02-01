@@ -40,4 +40,13 @@ class InsertSortTest {
         assertArrayEquals(expectedResult, result);
         System.out.println(Arrays.toString(arr));
     }
+    @Test
+    void sortArray_emptyArray() {
+        int[] emptyArray = {};
+        int[] expectedResult = {};
+
+        int[] result = insertSort.arr(emptyArray);
+        assertArrayEquals(expectedResult, result);
+        System.out.println(Arrays.toString(emptyArray));
+    }
 }
