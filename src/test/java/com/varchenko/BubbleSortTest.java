@@ -2,6 +2,8 @@ package com.varchenko;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class BubbleSortTest {
     private final BubbleSort bubbleSort = new BubbleSort();
@@ -12,7 +14,7 @@ class BubbleSortTest {
         int[] expectedResult = {1, 2, 5, 10, 10, 50};
 
         int[] result = bubbleSort.sortArray(arrayToSort);
-
+System.out.println(Arrays.toString(arrayToSort));
         assertArrayEquals(expectedResult, result);
     }
 
