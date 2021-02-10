@@ -1,29 +1,47 @@
 package com.varchenko;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
 import static com.varchenko.FibonacciSequence.fib;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FibonacciSequenceTest {
-    FibonacciSequence fibonacciSequence = new FibonacciSequence() ;
-        @Test
-        void Fibonacci_numbersFrom0to10() {
-            for (int index = 0; index < 10; index++) {
+    FibonacciSequence fibonacciSequence = new FibonacciSequence();
 
-                int expectedResult = fib(index);
-
-                int result = fib(index);
-                assertEquals(expectedResult, result);
-                System.out.println(fib(index));
-            }
-        }
-
-        @Test
-        void Fibonacci_SpecificNumber() {
-            int expectedResult = fib(10);
-            int result = 55;
-
-            assertEquals(expectedResult, result);
-            System.out.println(fib(10));
-        }
+    @Test
+    void Fibonacci_1() {
+        int expectedResult = 1;
+        int result = fib(1);
+        assertEquals(expectedResult, result);
     }
+
+    @Test
+    void Fibonacci_10() {
+        int expectedResult = 55;
+        int result = fib(10);
+
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void Fibonacci_0() {
+        int expectedResult = 0;
+        int result = fib(0);
+
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    void Fibonacci_negative() {
+        int expectedResult = -1;
+        int result = fib(-1);
+
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    void Fibonacci_enormous() {
+        int expectedResult = '-';
+        int result = fib(100000);
+
+        assertEquals(expectedResult, result);
+    }
+}
