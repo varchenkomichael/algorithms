@@ -1,12 +1,13 @@
 package com.varchenko;
 
 import org.junit.jupiter.api.Test;
-
 import static com.varchenko.FibonacciSequence.fib;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class FibonacciSequenceTest {
     FibonacciSequence fibonacciSequence = new FibonacciSequence();
+    private int result;
 
     @Test
     void Fibonacci_1() {
@@ -30,6 +31,7 @@ public class FibonacciSequenceTest {
 
         assertEquals(expectedResult, result);
     }
+
     @Test
     void Fibonacci_negative() {
         int expectedResult = -1;
@@ -37,11 +39,13 @@ public class FibonacciSequenceTest {
 
         assertEquals(expectedResult, result);
     }
+
     @Test
     void Fibonacci_enormous() {
-        int expectedResult = '-';
-        int result = fib(100000);
-
-        assertEquals(expectedResult, result);
+assertThrows(RuntimeException.class, () -> {
+    int expectedResult = 1;
+    int result = fib(100000);
+    assertEquals(expectedResult, result);
+});
     }
 }
