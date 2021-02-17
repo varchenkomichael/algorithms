@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FibonacciSequenceTest {
     FibonacciSequence fibonacciSequence = new FibonacciSequence();
-    private int result;
 
     @Test
     void Fibonacci_1() {
