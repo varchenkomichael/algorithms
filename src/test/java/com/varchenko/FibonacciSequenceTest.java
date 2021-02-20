@@ -1,6 +1,7 @@
 package com.varchenko;
 
 import org.junit.jupiter.api.Test;
+
 import static com.varchenko.FibonacciSequence.fib;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -41,10 +42,10 @@ public class FibonacciSequenceTest {
 
     @Test
     void Fibonacci_enormous() {
-assertThrows(RuntimeException.class, () -> {
-    int expectedResult = 1;
-    int result = fib(100000);
-    assertEquals(expectedResult, result);
-});
+        assertThrows(RuntimeException.class, () -> {
+            int expectedResult = 1;
+            int result = fib(100000);
+            assertEquals(expectedResult, result);
+        });
     }
 }

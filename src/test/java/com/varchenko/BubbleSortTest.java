@@ -3,6 +3,7 @@ package com.varchenko;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 class BubbleSortTest {
     private final BubbleSort bubbleSort = new BubbleSort();
 
