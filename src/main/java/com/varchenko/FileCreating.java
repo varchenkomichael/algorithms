@@ -12,7 +12,7 @@ public class FileCreating {
 
         Path path = Paths.get("C:\\Users\\User\\IdeaProjects\\resources\\MishaFile.txt");
         try {
-            String str = "hello";
+            String str = "hello Misha";
             byte[] bs = str.getBytes(StandardCharsets.UTF_8);
             Path filePath = Files.write(path, bs);
             System.out.println();
