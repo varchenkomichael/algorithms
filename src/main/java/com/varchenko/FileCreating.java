@@ -12,7 +12,8 @@ public class FileCreating {
 
         Path path = Paths.get("C:\\Users\\User\\IdeaProjects\\resources\\MishaFile.txt");
         try {
-            String str = "hello Misha";
+            String str = "fibonacci number for 16th member" +
+                    " 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610";
             byte[] bs = str.getBytes(StandardCharsets.UTF_8);
             Path filePath = Files.write(path, bs);
             System.out.println();
