@@ -2,50 +2,57 @@ package com.varchenko;
 
 import org.junit.jupiter.api.Test;
 
-import static com.varchenko.FibonacciSequence.fib;
-import static org.junit.jupiter.api.Assertions.*;
+import java.math.BigInteger;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class FibonacciSequenceTest {
-    FibonacciSequence fibonacciSequence = new FibonacciSequence();
+    private final FibonacciSequence fibonacciSequence = new FibonacciSequence();
 
     @Test
     void Fibonacci_1() {
-        int expectedResult = 1;
-        int result = fib(1);
+        BigInteger expectedResult = BigInteger.ONE;
+        BigInteger result = fibonacciSequence.generalMethod(1);
         assertEquals(expectedResult, result);
     }
 
     @Test
     void Fibonacci_10() {
-        int expectedResult = 55;
-        int result = fib(10);
+        BigInteger expectedResult = BigInteger.valueOf(55);
+        BigInteger result = fibonacciSequence.generalMethod(10);
+
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    void Fibonacci_99() {
+        BigInteger expectedResult = new BigInteger("218922995834555169026");
+        BigInteger result = fibonacciSequence.generalMethod(99);
 
         assertEquals(expectedResult, result);
     }
 
     @Test
     void Fibonacci_0() {
-        int expectedResult = 0;
-        int result = fib(0);
+        BigInteger expectedResult = BigInteger.ZERO;
+        BigInteger result = fibonacciSequence.generalMethod(0);
 
         assertEquals(expectedResult, result);
     }
 
     @Test
     void Fibonacci_negative() {
-        int expectedResult = -1;
-        int result = fib(-1);
-
-        assertEquals(expectedResult, result);
+        RuntimeException runtimeException = assertThrows(IllegalArgumentException.class, () -> fibonacciSequence.generalMethod(-5));
+        assertEquals(IllegalArgumentException.class, runtimeException.getClass());
     }
 
     @Test
     void Fibonacci_enormous() {
-        assertThrows(RuntimeException.class, () -> {
-            int expectedResult = 1;
-            int result = fib(100000);
-            assertEquals(expectedResult, result);
-        });
+        RuntimeException runtimeException = assertThrows(IllegalArgumentException.class,
+                () -> fibonacciSequence.generalMethod(100000));
+        assertEquals(IllegalArgumentException.class, runtimeException.getClass());
     }
+
 }
