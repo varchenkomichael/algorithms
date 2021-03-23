@@ -1,21 +1,24 @@
 package com.varchenko;
 
 
-import java.nio.charset.StandardCharsets;
+import java.math.BigInteger;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class FileFulfillLab {
-
+public class FileGeneratorService {
+FibonacciSequence fibonacciSequence = new FibonacciSequence();
     public void createFileWithFiboSequence(String fileName, int amountOfElements) {
         Path path = Paths.get("C:\\Users\\User\\IdeaProjects\\sortproject\\src\\main\\resources\\" + fileName);
         try {
-            String str = "fibonacci number for 16th member" +
-                    " 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610";
-            byte[] bs = str.getBytes(StandardCharsets.UTF_8);
-            Path filePath = Files.write(path, bs);
-            System.out.println();
+            FibonacciSequence fibonacciSequence = new FibonacciSequence();
+            List<BigInteger> allFiboNumbers = fibonacciSequence.getAllFiboNumbers(amountOfElements);
+            List<String> collect = allFiboNumbers.stream().map(BigInteger::toString).collect(Collectors.toList());
+//            int[] bs = allFiboNumbers.toArray();
+            Path filePath = Files.write(path, collect, Charset.defaultCharset());
         } catch (Exception e) {
             e.printStackTrace();
         }
