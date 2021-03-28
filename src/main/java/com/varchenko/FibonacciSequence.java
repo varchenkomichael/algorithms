@@ -11,15 +11,15 @@ public class FibonacciSequence {
     private static final BigInteger SECOND_FIBO_NUMBER = ONE;
 
 
-    public BigInteger fiboNumberFrom0to100(int amountOfElements) {
-        if (amountOfElements < 0 || amountOfElements > 100)
+    public BigInteger getFiboNumber(int fiboNumberPosition) {
+        if (fiboNumberPosition < 0 || fiboNumberPosition > 100)
             throw new IllegalArgumentException("Should be less than 100 or positive");
-        if (amountOfElements == 0) return ZERO;
+        if (fiboNumberPosition == 0) return ZERO;
         BigInteger grandPreviousResult = FIRST_FIBO_NUMBER;
         BigInteger previousTmpResult = SECOND_FIBO_NUMBER;
         BigInteger tmpResult = grandPreviousResult.add(previousTmpResult);
 
-        for (int i = 0; i < amountOfElements - 2; i++) {
+        for (int i = 0; i < fiboNumberPosition - 2; i++) {
             grandPreviousResult = previousTmpResult;
             previousTmpResult = tmpResult;
             tmpResult = grandPreviousResult.add(previousTmpResult);
