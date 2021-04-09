@@ -1,11 +1,11 @@
-package com.varchenko.collections.implementations;
+package com.varchenko.collections.withOop.implementations;
 
 import com.varchenko.collections.CollectionsExecutorTest;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CollectionsExecutorArrayListTest extends CollectionsExecutorTest {
+
+    private CollectionsExecutorArrayList<String> collectionsExecutor = new CollectionsExecutorArrayList<>();
 
     @Test
     void addElement() {
