@@ -1,4 +1,4 @@
-package com.varchenko.collections;
+package com.varchenko.collections.withOop;
 
 public interface CollectionsExecutor<K, T extends Iterable<K>> {
     /**
@@ -21,11 +21,7 @@ public interface CollectionsExecutor<K, T extends Iterable<K>> {
      *
      * @return true when collection if empty.
      */
-    boolean trimTheCollection();
-
-    T getCollection();
-
-    void setCollection(T collection);
+    boolean trimCollection();
 
     /**
      * @param oldValue old value to replace.
@@ -58,4 +54,8 @@ public interface CollectionsExecutor<K, T extends Iterable<K>> {
      * @return a new collection after it's being set.
      */
     T cloneTheCollection(T otherCollection);
+
+    T getCollection();
+
+    void setCollection(T collection);
 }
