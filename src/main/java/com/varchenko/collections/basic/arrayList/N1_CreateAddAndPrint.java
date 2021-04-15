@@ -2,9 +2,11 @@ package com.varchenko.collections.basic.arrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * 1. Write a Java program to create a new array list, add some colors (string) and print out the collection.
- * @see com.varchenko.collections.basic.arrayList.N1_CreateAddAndPrintTest for the test implementation.
+ * @see com.varchenko.collections.basic.arrayList N1_CreateAddAndPrintTest for the test implementation.
  */
 public class N1_CreateAddAndPrint<T> {
 
