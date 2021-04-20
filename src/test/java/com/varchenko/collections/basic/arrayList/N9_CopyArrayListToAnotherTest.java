@@ -13,7 +13,6 @@ class N9_CopyArrayListToAnotherTest {
         N9_CopyArrayListToAnother<String> instance = this.getInstanceForTests();
         List<String> arrayToCopy = List.of("Red", "Blue", "Green", "Pink", "Black");
         List<String> expectedResult = List.of("Red", "Blue", "Green", "Pink", "Black");
-
         List<String> result = instance.copyArrayList(arrayToCopy);
         assertEquals(expectedResult, result);
     }
