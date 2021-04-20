@@ -3,8 +3,9 @@ package com.varchenko.collections.basic.arrayList;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class N1_CreateAddAndPrintTest {
     N1_CreateAddAndPrint<String> createAddAndPrint = new N1_CreateAddAndPrint<>();
