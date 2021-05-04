@@ -1,5 +1,7 @@
 package com.varchenko.collections.basic.hashMap;
 
+import com.varchenko.collections.basic.User;
+
 import java.util.HashMap;
 
 public class N8_CheckIsValueExist {

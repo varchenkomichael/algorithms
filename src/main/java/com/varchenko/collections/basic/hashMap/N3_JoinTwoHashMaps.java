@@ -1,7 +1,8 @@
 package com.varchenko.collections.basic.hashMap;
 
+import com.varchenko.collections.basic.User;
+
 import java.util.HashMap;
-import java.util.Map;
 
 public class N3_JoinTwoHashMaps {
     private HashMap<User, String> hashMap;

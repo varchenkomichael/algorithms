@@ -1,5 +1,6 @@
 package com.varchenko.collections.basic.hashMap;
 
+import com.varchenko.collections.basic.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

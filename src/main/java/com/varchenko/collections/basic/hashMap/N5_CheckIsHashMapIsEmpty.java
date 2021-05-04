@@ -1,5 +1,7 @@
 package com.varchenko.collections.basic.hashMap;
 
+import com.varchenko.collections.basic.User;
+
 import java.util.Map;
 
 public class N5_CheckIsHashMapIsEmpty {

@@ -1,5 +1,7 @@
 package com.varchenko.collections.basic.hashMap;
 
+import com.varchenko.collections.basic.User;
+
 import java.util.Map;
 
 public class N1_AssociateValueWithKey {
@@ -10,6 +12,7 @@ public class N1_AssociateValueWithKey {
     }
 
     public Map<User, String> associateValueWithKey(User key, String value) {
+
         map.put(key, value);
         return map;
     }
