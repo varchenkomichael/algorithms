@@ -30,4 +30,20 @@ class N2_ReverseIntegerTest {
         int expectedResult = 0;
         assertEquals(expectedResult, result);
     }
+    @Test
+    void enormousNum(){
+        int x = 1534236456;
+        N2_ReverseInteger n2_reverseInteger = new N2_ReverseInteger();
+        int result = n2_reverseInteger.reverseInteger(x);
+        int expectedResult = 0;
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    void enormousNegative(){
+        int x = -2147483412;
+        N2_ReverseInteger n2_reverseInteger = new N2_ReverseInteger();
+        int result = n2_reverseInteger.reverseInteger(x);
+        int expectedResult = -2143847412;
+        assertEquals(expectedResult, result);
+    }
 }
